@@ -883,21 +883,25 @@ hr {
         color: #e97832;
     }
    
-    .menu ul {                    
-        display: none;
+    .menu ul {     
+        height: calc(100vh - 147px);               
+        display: flex;
         flex-direction: column;
-        align-items: center;      
-        font-size: 300px;  
-        position: absolute;
-        animation-name: menuSuave;
-        animation-duration: .9s;
-        left: 0px;           
-        top: 0; 
+        align-items: center;     
+        position: absolute;     
+        left: -300px;           
+        top: 147px; 
+        bottom: 0px;
         z-index: 99;
-        width: 100%;      
-        overflow: hidden; 
+        width: 100%;    
+        overflow: hidden;
+        transition: .4s;
         background-color: rgba(206,107,47,1); 
-    }   
+        visibility: hidden;
+    }
+    nav.activeMenu ul {
+        left: 0;
+    }
 
     .menu ul li a {
         color: #fff;
